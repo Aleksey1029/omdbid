@@ -202,10 +202,10 @@ function addFavToLS(movie) {
 	}
 
 	// Проверка на наличие фильма
-	const isMoviePresent = favs.some(favMovie => favMovie.imdbID === movie.imdbID)
+	let isMoviePresent = favs.some(favMovie => favMovie.imdbID === movie.imdbID)
 
 	if (isMoviePresent) {
-		console.log(`Фильм "${movie.title}" уже в избранном.`)
+		// console.log(`Фильм "${movie.title}" уже в избранном.`)
 
 		// Удаление фильма из списка
 		favs = favs.filter(favMovie => favMovie.imdbID !== movie.imdbID)
